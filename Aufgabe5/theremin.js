@@ -2,7 +2,7 @@
 var context = new AudioContext();
 var oscillator = null;
 var mouseDown = false;
-var gainNode = context.createGain;
+var gainNode = context.createGain();
 
 // Mouse Listener
 document.body.addEventListener('mousemove', function(e){
