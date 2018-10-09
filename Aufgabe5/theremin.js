@@ -54,6 +54,6 @@ function calculateFrequencyAndGain(e){
 	//oscillator.frequency.value = (e.clientX / window.innerWidth ) * maxFreq + minFreq;
 	//gainNode.gain.value = (e.clientY / window.innerHeight ) * maxGain + minGain; 
 	
-	oscillator.frequency.setTargetAtTime((e.clientX / window.innerWidth ) * maxFreq + minFreq);
-	gainNode.gain.setTargetAtTime((e.clientY / window.innerHeight ) * maxGain + minGain);
+	oscillator.frequency.setTargetAtTime((e.clientX / window.innerWidth ) * maxFreq + minFreq, context.currentTime + 1, 0.5);
+	gainNode.gain.setTargetAtTime((e.clientY / window.innerHeight ) * maxGain + minGain, context.currentTime + 1, 0.5);
 }
