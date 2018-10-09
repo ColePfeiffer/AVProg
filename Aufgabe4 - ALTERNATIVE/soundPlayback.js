@@ -13,7 +13,7 @@ function getData(i){
 	var request = new XMLHttpRequest();
 	
 	// Befehl, Pfad, asynchron (wird im Hintergrund ausgeführt)
-	request.open("GET", "sounds/sound"+(i+1+".wav"), true; 
+	request.open("GET", "sounds/sound"+(i+1+".wav"), true); 
 	request.responseType = "arraybuffer";
 	request.onLoad(function(){
 		var undecodedAudio = request.response;
