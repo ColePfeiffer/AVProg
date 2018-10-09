@@ -2,7 +2,7 @@
 
 https://colepfeiffer.github.io/AVProg/
 
-##Gain
+__Gain__
 
 Lautstärke, dB
 
