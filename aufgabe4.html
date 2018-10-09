@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>AVPRG Aufgabe 4</title>
+    </head>
+    <body>
+        <div id="mainContainer">
+            <!-- Dies ist der Code für die Aufgabe -->
+            <div id="div1" class="drumpad"></div>
+            <div id="div2" class="drumpad"></div>
+            <div id="div3" class="drumpad"></div>
+            <div id="div4" class="drumpad"></div>
+            <script>
+                var context = new AudioContext(),
+                drumpads = document.getElementsByClassName("drumpad"),
+                soundBuffers = [];
+
+                for (let i = 0; i < drumpads.length; i++) {
+                    soundBuffers[i] = new Audio("sounds/sound" + (i+1) + ".wav");
+                    var soundNode = context.createMediaElementSource(soundBuffers[i]);
+                    var gainNode = context.createGain();
+
+                    gainNode.gain.value = 0.8;
+
+                    soundNode.connect(gainNode);
+                    gainNode.connect(context.destination);
+
+                    drumpads[i].addEventListener("mousedown", function (e) {playSound(i)});
+                }
+
+                function playSound(i) {
+                    soundBuffers[i].play();
+                }
+            </script>
+            <!--------------------------------------->
+        </div>
+    </body>
+</html>
