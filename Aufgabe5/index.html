@@ -6,35 +6,8 @@
     </head>
     <body>
         <div id="mainContainer">
-            <!-- Dies ist der Code für die Aufgabe -->
-            <div id="div1" class="drumpad"></div>
-            <div id="div2" class="drumpad"></div>
-            <div id="div3" class="drumpad"></div>
-            <div id="div4" class="drumpad"></div>
-            <script>
-				
-				document.body.addEventListener('mousemove', function(e){
-				console.log(e.clientX);
-				console.log(e.clientY);
-
-				console.log(window.innerWidth);
-				console.log(window.innerHeight);
-			});
-
-				var context = new AudioContext();
-				var oscillatorNode = context.createOscillator();
-				var gainNode = context.createGain();
-					
-				oscillatorNode.connect(gainNode);
-				gainNode.connect(context.destination);
-
-				gainNode.gain.value = 0.3;
-				oscillatorNode.frequency.value = 880;
-
-				oscillatorNode.start(context.currentTime);
-				oscillatorNode.stop(context.currentTime + 1);
-				
-            </script>
+			<h1>Aufgabe 5</h1>
+		    <script src="theremin.js"></script>
             <!--------------------------------------->
         </div>
     </body>
