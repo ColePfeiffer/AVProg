@@ -1,9 +1,12 @@
 body {
     margin: 0;
+    background-color: #BBBAC6;
+    color: #1c0f13;
 }
 
 h1, p {
     margin: 0.35em;
+    color: #e2e2e2;
 }
 
 ul {
