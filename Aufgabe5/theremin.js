@@ -44,7 +44,7 @@ document.body.addEventListener('mouseup', function(e){
 	
 });
 
-function calculateFrequencyAndGain(event){
+function calculateFrequencyAndGain(e){
 	
 	var maxFreq = 2000, minFreq = 20, maxGain = 1, minGain = 0;
 	
