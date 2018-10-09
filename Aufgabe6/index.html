@@ -1,39 +1,31 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>AVPRG Aufgabe 4</title>
-    </head>
-    <body>
-        <div id="mainContainer">
-            <!-- Dies ist der Code für die Aufgabe -->
-            <div id="div1" class="drumpad"></div>
-            <div id="div2" class="drumpad"></div>
-            <div id="div3" class="drumpad"></div>
-            <div id="div4" class="drumpad"></div>
-            <script>
-                var context = new AudioContext(),
-                drumpads = document.getElementsByClassName("drumpad"),
-                soundBuffers = [];
+   <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <title>AVPRG Aufgabe 4</title>
+   </head>
+   <body>
+      <div id="mainContainer">
+         <div class="slidecontainer">
 
-                for (let i = 0; i < drumpads.length; i++) {
-                    soundBuffers[i] = new Audio("sounds/sound" + (i+1) + ".wav");
-                    var soundNode = context.createMediaElementSource(soundBuffers[i]);
-                    var gainNode = context.createGain();
+            <button id="playStopButton">Play</button>
 
-                    gainNode.gain.value = 0.8;
-
-                    soundNode.connect(gainNode);
-                    gainNode.connect(context.destination);
-
-                    drumpads[i].addEventListener("mousedown", function (e) {playSound(i)});
-                }
-
-                function playSound(i) {
-                    soundBuffers[i].play();
-                }
-            </script>
-            <!--------------------------------------->
-        </div>
-    </body>
+            <div id="gainContainer">Gain
+                <input type="range" min="0" max="100" value="10" class="slider" id="gainSlider">
+                <span id="gainOutput">1.0 dB</span><br>
+            </div>
+			<div id="panningContainer">Panning
+                <input type="range" min="0" max="100" value="50" class="slider" id="panningSlider">
+                <span id="panningOutput">1.0 dB</span><br>
+            </div>
+			<div id="delayContainer">Delay
+                <input type="range" min="0" max="100" value="0" class="slider" id="delaySlider">
+                <span id="delayOutput">1.0 dB</span><br>
+            </div>
+			
+         </div>
+         <script src = "aufgabe6.js"></script>
+         <!--------------------------------------->
+      </div>
+   </body>
 </html>

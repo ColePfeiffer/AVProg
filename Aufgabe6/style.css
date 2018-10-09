@@ -1,0 +1,32 @@
+html, body{
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: darkslategrey;
+}
+
+div{
+    font-size: 1.5em;
+}
+
+#gainContainer{
+    background-color: black;
+    color: palegreen;
+    width: 100%;
+}
+
+#panningContainer{
+    background-color: black;
+    color: yellow;
+    width: 100%;
+}
+
+#delayContainer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+#playstopButton{
+    font-size: 2em;
+    padding: 0.5em, 1.5em;
+}
