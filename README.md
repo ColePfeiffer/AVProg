@@ -2,14 +2,14 @@
 
 https://colepfeiffer.github.io/AVProg/
 
-__Gain__
+__Gain
 
 * Lautstärke, dB
 
-__Delay__
+__Delay
 
 * Verzögerung, Sekunden
 
-__Panning__
+__Panning
 
 * Stereosteuerung, L/R
